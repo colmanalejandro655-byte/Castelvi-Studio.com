@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#090909">
+  <meta name="description" content="Castelvi Studio — Barbería y grooming de Exequiel Castelvi. Sacá tu turno en línea, mirá nuestros cortes y llevate tus productos favoritos.">
+  <title>Castelvi Studio · Barbería & Grooming</title>
+  <link rel="icon" href="assets/placeholder-corte.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- ============================ ICONOS ============================ -->
+  <svg xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true">
+    <symbol id="i-scissors" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M20 4 8.12 15.88M14.47 14.48 20 20M8.12 8.12 12 12"/></symbol>
+    <symbol id="i-beard" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 10c0-3.9 3.1-7 7-7s7 3.1 7 7v3c0 4.4-3.1 8-7 8s-7-3.6-7-8v-3Z"/><path d="M9 14h.01M15 14h.01M12 18v-4M9 6c1 1 2 1.5 3 1.5S14 7 15 6"/></symbol>
+    <symbol id="i-sparkle" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3 1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9L12 3ZM19 16l.8 2.2L22 19l-2.2.8L19 22l-.8-2.2L16 19l2.2-.8L19 16Z"/></symbol>
+    <symbol id="i-lock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3M12 15v2"/></symbol>
+    <symbol id="i-arrow-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-6-6 6 6-6 6"/></symbol>
+    <symbol id="i-arrow-left" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5m6 6-6-6 6-6"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="3"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.9a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.2-1.2a2 2 0 0 1 2.1-.5c.9.3 1.9.6 2.9.7a2 2 0 0 1 1.7 2Z"/></symbol>
+    <symbol id="i-instagram" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></symbol>
+    <symbol id="i-whatsapp" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.5 2 2 6.5 2 12.04c0 1.77.46 3.5 1.34 5.02L2 22l5.08-1.33A9.98 9.98 0 0 0 12.04 22C17.58 22 22 17.5 22 12.04 22 6.5 17.58 2 12.04 2Zm0 18.25a8.2 8.2 0 0 1-4.18-1.15l-.3-.18-3.02.79.81-2.94-.2-.31a8.22 8.22 0 0 1-1.27-4.42c0-4.54 3.7-8.23 8.24-8.23a8.2 8.2 0 0 1 8.22 8.23c0 4.54-3.69 8.21-8.3 8.21Zm4.51-6.16c-.25-.13-1.46-.72-1.68-.8-.23-.08-.39-.13-.56.13-.16.25-.64.8-.79.96-.14.16-.29.18-.54.06-.25-.13-1.06-.39-2.02-1.25-.75-.66-1.25-1.48-1.4-1.73-.14-.25-.01-.39.11-.51.11-.11.25-.29.37-.43.13-.14.17-.25.25-.42.08-.16.04-.31-.02-.44-.06-.13-.56-1.34-.76-1.84-.2-.48-.4-.42-.56-.43h-.47c-.16 0-.44.06-.67.31-.23.25-.88.86-.88 2.11s.9 2.45 1.03 2.62c.13.16 1.77 2.7 4.3 3.79.6.26 1.07.41 1.43.53.6.19 1.15.16 1.58.1.48-.07 1.46-.6 1.67-1.17.2-.58.2-1.07.14-1.18-.06-.1-.23-.16-.48-.29Z"/></symbol>
+    <symbol id="i-cart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="20" r="1.5"/><circle cx="18" cy="20" r="1.5"/><path d="M2 3h2.5l2.4 12h11l2.1-8H6"/></symbol>
+    <symbol id="i-star" viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.3 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8L12 2Z"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></symbol>
+    <symbol id="i-calendar" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4M8 3v4M3 10h18"/></symbol>
+    <symbol id="i-users" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.9M16 3.1a4 4 0 0 1 0 7.8"/></symbol>
+    <symbol id="i-bell" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9M13.7 21a2 2 0 0 1-3.4 0"/></symbol>
+    <symbol id="i-ticket" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9V6a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v3a3 3 0 0 0 0 6v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-3a3 3 0 0 0 0-6Z"/><path d="M13 5v2M13 11v2M13 17v2"/></symbol>
+  </svg>
+
+  <!-- ============================ NAVBAR ============================ -->
+  <header class="navbar" id="navbar">
+    <div class="navbar__inner">
+      <a class="brand" href="#inicio" aria-label="Ir al inicio">
+        <span class="brand__mark" id="brandMark">EC</span>
+        <span>
+          <span class="brand__name" id="brandName">Castelvi Studio</span>
+          <span class="brand__sub">BARBERIA</span>
+        </span>
+      </a>
+      <nav class="nav-links" aria-label="Navegación principal">
+        <a href="#sala">Sala</a>
+        <a href="#reservar">Reservar</a>
+        <a href="#equipo">Equipo</a>
+        <a href="#galeria">Galería</a>
+        <a href="#tienda">Tienda</a>
+      </nav>
+      <div class="navbar__right">
+        <a class="nav-admin" href="admin.html" aria-label="Panel del barbero" title="Panel del barbero">
+          <svg aria-hidden="true"><use href="#i-lock"/></svg>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ============================= HERO ============================= -->
+    <section class="hero" id="inicio">
+      <div class="hero__bg" id="heroBg"></div>
+      <div class="hero__grid-lines"></div>
+      <div class="container">
+        <div class="hero__layout">
+          <div>
+            <div class="status-badge" id="statusBadge" role="status" aria-live="polite">
+              <span class="status-badge__dot"></span>
+              <span id="statusText">Consultando lugares…</span>
+            </div>
+            <div class="hero__eyebrow"><span></span><span id="heroEyebrow">BARBERÍA · ESTILO</span></div>
+            <h1><span id="heroTitle">Tu estilo,</span><em id="heroAccent">nuestro oficio.</em></h1>
+            <p class="hero__text" id="heroText">Cortes con precisión, barbas esculpidas y una experiencia de primera.</p>
+            <div class="hero__actions">
+              <a href="#reservar" class="btn btn--gold"><svg aria-hidden="true"><use href="#i-scissors"/></svg> Reservar mi lugar</a>
+              <a href="#sala" class="btn btn--ghost"><svg aria-hidden="true"><use href="#i-calendar"/></svg> Ver sala en vivo</a>
+            </div>
+          </div>
+
+          <aside class="hero-card" aria-label="Estado de hoy">
+            <div class="hero-card__top">
+              <span class="hero-card__label">HOY EN EL ESTUDIO</span>
+              <span class="hero-card__live">EN VIVO</span>
+            </div>
+            <div class="hero-card__big" id="heroBig">—<small>/—</small></div>
+            <div class="hero-card__caption" id="heroCaption">lugares disponibles</div>
+            <div class="hero-card__rows">
+              <div class="hero-card__row"><span>Barbero</span><b class="gold" id="heroBarber">Exequiel Castelvi</b></div>
+              <div class="hero-card__row"><span>Horario</span><b id="heroHours">—</b></div>
+              <div class="hero-card__row"><span>Próximo libre</span><b id="heroNext">—</b></div>
+              <div class="hero-card__row"><span>En la silla</span><b id="heroNow">—</b></div>
+            </div>
+            <div class="hero-card__progress"><i id="heroProgress" style="width:0%"></i></div>
+          </aside>
+        </div>
+      </div>
+      <span class="hero__scroll" aria-hidden="true">SCROLL</span>
+    </section>
+
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track" id="marqueeTrack"></div>
+    </div>
+
+    <!-- ============================ SALA ============================= -->
+    <section class="section sala" id="sala">
+      <span class="section-index" aria-hidden="true">01</span>
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Sala de espera · en vivo</span>
+          <h2 class="section-title">Mirá quién está <em>en la silla</em></h2>
+          <p class="section-sub">Elegí el día, mirá los horarios libres y reservá el que más te conviene. Todo se actualiza en tiempo real.</p>
+        </div>
+
+        <div class="sala__layout">
+          <div class="panel sala__agenda">
+            <div class="sala__top">
+              <div class="day-strip" id="salaDays" aria-label="Elegir día"></div>
+              <div class="sala__legend" aria-label="Referencias">
+                <span><i class="dot dot--free"></i> Libre</span>
+                <span><i class="dot dot--partial"></i> Último lugar</span>
+                <span><i class="dot dot--booked"></i> Reservado</span>
+                <span><i class="dot dot--chair"></i> En silla</span>
+                <span><i class="dot dot--done"></i> Atendido</span>
+              </div>
+            </div>
+            <div class="sala__summary" id="salaSummary" aria-live="polite"></div>
+            <div class="slot-grid" id="salaSlots"></div>
+            <p class="sala__hint"><svg aria-hidden="true"><use href="#i-calendar"/></svg> Tocá un horario libre para reservarlo. Los horarios pasados quedan bloqueados.</p>
+          </div>
+
+          <aside class="sala__side">
+            <div class="live-card">
+              <div class="live-card__head"><span>AHORA EN LA SILLA</span><b><i></i> EN VIVO</b></div>
+              <div id="salaNow"></div>
+            </div>
+
+            <div class="panel live-queue">
+              <div class="live-queue__head"><span>PRÓXIMOS TURNOS</span><b id="salaQueueCount">0</b></div>
+              <div id="salaQueue"></div>
+            </div>
+
+            <div class="panel mi-turno" id="miTurnoCard">
+              <div class="mi-turno__head">
+                <span><svg aria-hidden="true"><use href="#i-ticket"/></svg> MI TURNO</span>
+                <b id="miTurnoCount">0</b>
+              </div>
+              <div id="miTurnoBody"></div>
+              <form class="mi-turno__form" id="miCodigoForm">
+                <label for="miCodigoInput">Buscar por código</label>
+                <div>
+                  <input id="miCodigoInput" placeholder="CS-20261124-003" autocomplete="off" spellcheck="false">
+                  <button class="btn btn--ghost btn--sm" type="submit">Buscar</button>
+                </div>
+              </form>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================== RESERVA =========================== -->
+    <section class="section booking" id="reservar">
+      <span class="section-index" aria-hidden="true">02</span>
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Reserva rápida</span>
+          <h2 class="section-title">Tu turno en <em>30 segundos</em></h2>
+          <p class="section-sub">Elegí tu servicio, el barbero y el horario que te conviene. Tu ticket digital queda listo al instante.</p>
+        </div>
+
+        <div class="booking__layout">
+          <form class="panel" id="bookingForm" novalidate>
+            <div class="form-step">
+              <div class="form-step__head">
+                <span class="form-step__num">1</span>
+                <span class="form-step__title">Elegí el servicio</span>
+                <span class="form-step__hint">OBLIGATORIO</span>
+              </div>
+              <div class="service-grid" id="serviceGrid"></div>
+            </div>
+
+            <div class="form-step">
+              <div class="form-step__head">
+                <span class="form-step__num">2</span>
+                <span class="form-step__title">¿Quién te atiende?</span>
+                <span class="form-step__hint">OBLIGATORIO</span>
+              </div>
+              <div class="field">
+                <label for="barberoSelect">Barbero</label>
+                <select id="barberoSelect" name="barbero"></select>
+              </div>
+            </div>
+
+            <div class="form-step">
+              <div class="form-step__head">
+                <span class="form-step__num">3</span>
+                <span class="form-step__title">Día y horario</span>
+                <span class="form-step__hint">ELEGÍ UN HORARIO LIBRE</span>
+              </div>
+              <div class="day-strip day-strip--compact" id="bookingDays" aria-label="Elegir día del turno"></div>
+              <div class="slot-grid slot-grid--compact" id="bookingSlots"></div>
+              <p class="field-hint" id="bookingSlotHint" style="margin-top:12px">Seleccioná un día y después un horario.</p>
+            </div>
+
+            <div class="form-step" id="extraStep">
+              <div class="form-step__head">
+                <span class="form-step__num">4</span>
+                <span class="form-step__title">Sumá productos <span style="color:var(--muted-2);font-family:var(--font-body);font-size:11px;letter-spacing:0">(opcional)</span></span>
+              </div>
+              <div class="chip-grid" id="extraProducts"></div>
+            </div>
+
+            <div class="form-step">
+              <div class="form-step__head">
+                <span class="form-step__num">5</span>
+                <span class="form-step__title">Tus datos</span>
+              </div>
+              <div class="field-grid">
+                <div class="field" id="fieldNombre">
+                  <label for="clienteNombre">Nombre *</label>
+                  <input id="clienteNombre" name="nombre" type="text" placeholder="¿Cómo te llamás?" autocomplete="name" maxlength="60">
+                  <span class="field__error">Escribí tu nombre.</span>
+                </div>
+                <div class="field" id="fieldWhatsapp">
+                  <label for="clienteWhatsapp">WhatsApp *</label>
+                  <input id="clienteWhatsapp" name="whatsapp" type="tel" placeholder="9XXXXXXXXX" autocomplete="tel" inputmode="tel" maxlength="20">
+                  <span class="field__error">Ingresá un WhatsApp válido.</span>
+                </div>
+              </div>
+              <div class="field" style="margin-top:14px">
+                <label for="clienteNota">Algo que debamos saber (opcional)</label>
+                <input id="clienteNota" name="nota" type="text" placeholder="Ej: quiero el fade bien corto" maxlength="120">
+              </div>
+              <p class="field-hint" style="margin-top:14px">Al confirmar, tu lugar queda reservado. Te avisaremos por WhatsApp cuando esté por llegar tu turno.</p>
+            </div>
+          </form>
+
+          <aside class="summary">
+            <div class="panel" id="summaryPanel">
+              <div class="summary__head">
+                <h3>Tu reserva</h3>
+                <span class="summary__live">● ACTUALIZANDO</span>
+              </div>
+              <div class="summary__rows" id="summaryRows"></div>
+              <div class="summary__total"><span>Total a pagar</span><b id="summaryTotal">₲ 0</b></div>
+              <button type="button" class="btn btn--gold btn--block" id="confirmBtn">
+                <svg aria-hidden="true"><use href="#i-check"/></svg> Confirmar turno
+              </button>
+              <p class="summary__note">Sin seña · Pagás al finalizar el servicio</p>
+            </div>
+
+            <div class="ticket hidden" id="ticketPanel" aria-live="polite">
+              <div class="ticket__top">
+                <div class="ticket__label">TICKET DIGITAL · CASTELVI STUDIO</div>
+                <div class="ticket__number" id="ticketNumber">#001</div>
+              </div>
+              <div class="ticket__rows" id="ticketRows"></div>
+              <div class="ticket__actions">
+                <a class="btn btn--gold btn--block" id="ticketMaps" target="_blank" rel="noopener">
+                  <svg aria-hidden="true"><use href="#i-pin"/></svg> Cómo llegar (Google Maps)
+                </a>
+                <a class="btn btn--whatsapp btn--block" id="ticketWa" target="_blank" rel="noopener">
+                  <svg aria-hidden="true"><use href="#i-whatsapp"/></svg> Avisar por WhatsApp
+                </a>
+                <a class="btn btn--ghost btn--block hidden" id="ticketNotify" target="_blank" rel="noopener">
+                  <svg aria-hidden="true"><use href="#i-bell"/></svg> Avisar que llegué
+                </a>
+                <button type="button" class="btn btn--ghost btn--block" id="anotherTurnBtn">Reservar otro turno</button>
+              </div>
+              <div class="ticket__code" id="ticketCode">—</div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================ EQUIPO =========================== -->
+    <section class="section team" id="equipo">
+      <span class="section-index" aria-hidden="true">03</span>
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">El equipo</span>
+          <h2 class="section-title">Manos que <em>saben cortar</em></h2>
+          <p class="section-sub">Conocé a los barberos del estudio. Elegí a quién te atiende cuando reserves tu turno.</p>
+        </div>
+        <div class="team-grid" id="teamGrid"></div>
+      </div>
+    </section>
+
+    <!-- =========================== GALERÍA =========================== -->
+    <section class="section gallery" id="galeria">
+      <span class="section-index" aria-hidden="true">04</span>
+      <div class="container">
+        <div class="section-head" style="position:relative">
+          <span class="eyebrow">Trabajos reales</span>
+          <h2 class="section-title">Cortes que <em>hablan por sí solos</em></h2>
+          <p class="section-sub">Deslizá y elegí tu próximo look. Si te gusta uno, lo reservamos para vos.</p>
+          <div class="carousel__nav">
+            <button type="button" id="galleryPrev" aria-label="Anterior"><svg aria-hidden="true"><use href="#i-arrow-left"/></svg></button>
+            <button type="button" id="galleryNext" aria-label="Siguiente"><svg aria-hidden="true"><use href="#i-arrow-right"/></svg></button>
+          </div>
+        </div>
+        <div class="carousel-wrap">
+          <div class="carousel" id="carouselTrack" role="region" aria-label="Galería de cortes" tabindex="0"></div>
+          <div class="carousel__dots" id="carouselDots"></div>
+        </div>
+        <div class="gallery__footer">
+          <a class="link-gold" id="igLink" href="https://www.instagram.com/castelvi.studio/" target="_blank" rel="noopener">
+            <svg aria-hidden="true" style="width:16px;height:16px"><use href="#i-instagram"/></svg> Ver más trabajos en Instagram
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================ TIENDA =========================== -->
+    <section class="section shop" id="tienda">
+      <span class="section-index" aria-hidden="true">05</span>
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Tienda · Castelvi Goods</span>
+          <h2 class="section-title">Llevate el <em>estilo a casa</em></h2>
+          <p class="section-sub">Productos seleccionados para mantener tu corte impecable. Sumalos a tu turno o pedilos por WhatsApp.</p>
+        </div>
+        <div class="products-grid" id="productsGrid"></div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============================ FOOTER ============================ -->
+  <footer class="footer" id="contacto">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__map">
+          <iframe id="mapFrame" title="Ubicación de Castelvi Studio" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+            src="https://www.google.com/maps?q=Castelvi%20Studio%20Asuncion%20Paraguay&output=embed"></iframe>
+          <a class="footer__map-link" id="mapLink" href="https://maps.app.goo.gl/tAW9xdn6WXLUAufm9" target="_blank" rel="noopener">ABRIR EN MAPS ↗</a>
+        </div>
+        <div class="footer__info">
+          <h3>Veni a <em>Castelvi</em></h3>
+          <p style="color:var(--muted);max-width:420px;margin:0">Reservá tu horario, seguí la sala en vivo y vení a cortarte con el equipo. Tu próximo corte empieza acá.</p>
+          <div class="footer__data">
+            <div class="footer__data-item">
+              <svg aria-hidden="true"><use href="#i-pin"/></svg>
+              <div><b>Dirección</b><span id="footerAddress">—</span></div>
+            </div>
+            <div class="footer__data-item">
+              <svg aria-hidden="true"><use href="#i-clock"/></svg>
+              <div><b>Horarios</b><pre id="footerHours">—</pre></div>
+            </div>
+            <div class="footer__data-item">
+              <svg aria-hidden="true"><use href="#i-phone"/></svg>
+              <div><b>WhatsApp</b><span id="footerPhone">+595 992 271 978</span></div>
+            </div>
+          </div>
+          <div class="footer__socials">
+            <a id="footerIg" href="https://www.instagram.com/castelvi.studio/" target="_blank" rel="noopener" aria-label="Instagram"><svg aria-hidden="true"><use href="#i-instagram"/></svg></a>
+            <a id="footerWa" href="https://wa.me/595992271978" target="_blank" rel="noopener" aria-label="WhatsApp"><svg aria-hidden="true"><use href="#i-whatsapp"/></svg></a>
+            <a id="footerMaps" href="https://maps.app.goo.gl/tAW9xdn6WXLUAufm9" target="_blank" rel="noopener" aria-label="Google Maps"><svg aria-hidden="true"><use href="#i-pin"/></svg></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>© <span id="year"></span> <span id="footerBrand">Castelvi Studio</span>. Todos los derechos reservados.</span>
+        <span class="made">Hecho con precisión · Exequiel Castelvi</span>
+      </div>
+    </div>
+  </footer>
+
+  <a class="fab" id="fabWa" href="https://wa.me/595992271978" target="_blank" rel="noopener" aria-label="Escribinos por WhatsApp">
+    <svg aria-hidden="true"><use href="#i-whatsapp"/></svg>
+  </a>
+
+  <div class="toast-stack" id="toastStack" aria-live="polite"></div>
+
+  <script src="js/config.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
